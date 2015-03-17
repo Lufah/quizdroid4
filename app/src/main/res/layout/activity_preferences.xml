@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Preferences"
+        android:textAlignment="center"
+        android:singleLine="true"
+        android:textSize="30dp"
+        android:gravity="center_horizontal"
+        android:id="@+id/title"/>
+
+    <TextView
+        android:id="@+id/attr_url"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question data URL: "
+        android:layout_below="@+id/title"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/input_url"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="questions.txt"
+        android:textColor="#ff23d8ff"
+        android:enabled="false" />
+
+    <TextView
+        android:id="@+id/attr_mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time before new download: "
+        android:layout_below="@+id/title"
+        android:textSize="25dp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/input_mins"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="1"
+        android:textColor="#ff23d8ff"
+        android:enabled="false" />
+
+    <Button
+        android:id="@+id/btn_set"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_below="@+id/input_mins"
+        android:text="Set"
+        android:onClick="set"
+        android:enabled="false" />
+
+</LinearLayout>
